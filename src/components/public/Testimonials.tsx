@@ -12,6 +12,7 @@ import darshilParikh from "../public/img/landing-page-people/darshil-parikh.png"
 import khetal from "../public/img/landing-page-people/khetal.png";
 import shreya from "../public/img/landing-page-people/shreya-thakkar.png";
 import priyansh from "../public/img/landing-page-people/priyansh.jpeg";
+import khushi from "../public/img/landing-page-people/khushi-prajapati.png";
 
 import Image from "next/image";
 interface TestimonialProps {
@@ -34,6 +35,13 @@ const testimonials: TestimonialProps[] = [
     userName: "IOT Developer",
     comment:
       "Feathery is a good platform for expressing my achivements, get other's opinions thru comments, find people I can work with and solve my problems. I love the idea behind the paltform!",
+  },
+  {
+    image: khushi,
+    name: "Khushi Prajapati",
+    userName: "Frontend Developer",
+    comment:
+      "Feathery is awesome! It lets me mix photos with blogs effortlessly. It's easy to use, and the community rocks. It's not just a platform; it's where I feel free to express myself. Thanks, Feathery, for making sharing thoughts fun!",
   },
 
   {

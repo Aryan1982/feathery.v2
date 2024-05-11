@@ -38,28 +38,34 @@ export default function Newsletter() {
     console.log("data is ");
     console.log(data);
     setIsSubmiting(true);
-
-    try {
-      if (data.email) {
-        // const response = await axios.post<ApiResponse>("/api/newsletter", data);
-        // console.log("responsee is:-",response.data.message)
-        // toast({
-        //   title: " Success",
-        //   description: response.data.message,
-        // });
-        setIsSubmiting(false)
-      } else {
-        setIsSubmiting(false);
-        toast({
-          title: "failed",
-          description: "error",
-          variant: "destructive",
+    
+    toast({
+          title: " Success",
+          description: "NewsLetter Succesfully",
         });
-      }
-    } catch (error: any) {
-      setIsSubmiting(false);
-      console.log(error);
-    }
+   setIsSubmiting(false);
+   form.reset();
+            // try {
+    //   if (data.email) {
+    //     // const response = await axios.post<ApiResponse>("/api/newsletter", data);
+    //     // console.log("responsee is:-",response.data.message)
+    //     // toast({
+    //     //   title: " Success",
+    //     //   description: response.data.message,
+    //     // });
+    //     setIsSubmiting(false)
+    //   } else {
+    //     setIsSubmiting(false);
+    //     toast({
+    //       title: "failed",
+    //       description: "error",
+    //       variant: "destructive",
+    //     });
+    //   }
+    // } catch (error: any) {
+    //   setIsSubmiting(false);
+    //   console.log(error);
+    // }
   };
 
   return (
@@ -73,9 +79,6 @@ export default function Newsletter() {
             Newsletter
           </span>
         </h3>
-        <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -86,19 +89,15 @@ export default function Newsletter() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="email.com"
+                      placeholder="Enter your email" className="mt-5 mb-4"
                       {...field}
                       onChange={(e) => {
                         field.onChange(e);
                       }}
                     />
                   </FormControl>
-                  <FormDescription>
-                    This is your public display name.
-                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
